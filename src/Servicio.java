@@ -10,15 +10,12 @@ public class Servicio {
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
     public double getCostoAdicional() {
         return costoAdicional;
     }
-
     public void setCostoAdicional(double costoAdicional) {
         this.costoAdicional = costoAdicional;
     }

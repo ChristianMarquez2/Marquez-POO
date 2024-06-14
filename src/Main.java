@@ -1,13 +1,24 @@
-
 public class Main {
     public static void main(String[] args) {
 
-        System.out.printf("Hello and welcome!");
+        Ruta rutaQuitoGuayaquil = new Ruta("Quito", "Guayaquil", 20);
 
-        for (int i = 1; i <= 5; i++) {
+        Pasajero pasajero1 = new Pasajero("Jennifer Zambrano", "1751486331", "0980865549");
 
-            System.out.println("i = " + i);
-        }
+        Ticket ticketNormal = new Ticket(rutaQuitoGuayaquil, false, pasajero1);
+        ticketNormal.setSeleccionAsiento("Ventama");
+        ticketNormal.setEspacioMaleta(true);
+        ticketNormal.setMaletaAdicional(true);
+
+
+        Ticket ticketVIP = new Ticket(rutaQuitoGuayaquil, true, pasajero1);
+        ticketVIP.setServiciosAdicionales(new String[]{"Televisin", "internet"});
+        ticketVIP.setEspacioMaleta(true);
+        ticketVIP.setMaletaAdicional(true);
+
+        System.out.println("Informacion del ticket Normal:");
+        ticketNormal.imprimirTicket();
+        System.out.println("\nInformacion del ticket VIP:");
+        ticketVIP.imprimirTicket();
     }
 }
-
